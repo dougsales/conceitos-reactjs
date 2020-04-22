@@ -15,8 +15,8 @@ function App() {
 
   async function handleAddRepository() {
     api.post('repositories', {
-      title: 'Desafio ReactJS',
-      url: 'http://localhost:3333/repository',
+      title: `Novo Projeto ${Date.now()}`,
+      url: 'http://localhost:3333',
       techs: []
     }).then(response => {
       setRepositories([...repositories, response.data])
